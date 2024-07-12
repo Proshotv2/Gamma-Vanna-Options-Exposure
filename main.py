@@ -100,7 +100,7 @@ def print_rate_limits(response):
 
 def get_tradier_credentials(is_sandbox):
 
-    access_token = 'bsYMippYecpJmcK4BYCHaAmaGto0'
+    access_token = '<Add OAuth Token Here>'
     base_url = 'https://sandbox.tradier.com/v1/' if is_sandbox else 'https://api.tradier.com/v1/'
 
     return access_token, base_url
@@ -401,8 +401,8 @@ def update_output(n_intervals):
     symbol = "QQQ"
     symbol_data = get_quote([symbol])
     #qqq_close = get_qqq_close()
-    qqq_close = 502.96
-    nq_close = 20917
+    qqq_close = 502.96 <-- Change this value daily to get accurate Readings
+    nq_close = 20917  <-- Change this value daily to get accurate Readings
     expiration_dates = get_options_expirations(symbol)
     options_df = get_options_data(symbol, expiration_dates[0])
     ratio = round(nq_close / qqq_close, 2)
